@@ -8,13 +8,13 @@
             'aed_nitrogen',
             'aed_phosphorus',
             'aed_organic_matter',
-            'aed_phytoplankton',
+			'aed_phytoplankton',
             !'aed_pathogens',
             !'aed_zooplankton',
             !'aed_geochemistry',
             !'aed_seddiagenesis',
             !'aed_tracer',
-            'aed_totals'
+            !'aed_totals'
 /
 
 !-------------------------------------------------------------------------------
@@ -147,8 +147,9 @@
 
 !-------------------------------------------------------------------------------
 &aed_phytoplankton
-   num_phytos = 3
-   the_phytos = 3,7,8
+   num_phytos = 15
+   the_phytos = 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+   !the_phytos = 11,12,16
    p_excretion_target_variable='aed_organic_matter_dop'
    n_excretion_target_variable='aed_organic_matter_don'
    c_excretion_target_variable='aed_organic_matter_doc'
@@ -164,6 +165,7 @@
    do_uptake_target_variable='aed_oxygen_oxy'
    c_uptake_target_variable='aed_carbon_dic'
 /
+
 
 !-------------------------------------------------------------------------------
 &aed_zooplankton
@@ -236,7 +238,7 @@
    TOC = 'aed_organic_matter_doc',
          'aed_organic_matter_poc',
          'aed_phytoplankton_green'
-   TSS = 'aed_phytoplankton_green' !, .... 
+   !TSS = 'aed_phytoplankton_green' !, .... 
    turbidity = 0.1,0.1            !,  <vector same length as TSS names>
 /
 
